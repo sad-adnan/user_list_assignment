@@ -9,6 +9,21 @@ A Flutter application that fetches and displays users from [ReqRes](https://reqr
 - **Offline Experience:** Hive caches the latest successful response so previously viewed users are shown even when the network is unavailable.
 - **Robust Error States:** Clear messaging for API failures, connectivity loss, and empty responses with retry actions.
 
+## Screenshots
+
+<table>
+  <tr>
+    <td><img src="screenshots/user_list.jpg" alt="User List" width="540"/></td>
+    <td><img src="screenshots/user_list_2.jpg" alt="User Search" width="540"/></td>
+    <td><img src="screenshots/user_detail.jpg" alt="User Detail" width="540"/></td>
+  </tr>
+  <tr>
+    <td align="center">User List</td>
+    <td align="center">User List Pagination</td>
+    <td align="center">User Details</td>
+  </tr>
+</table>
+
 ## Architecture
 The project follows a pragmatic, feature-driven structure:
 ```
@@ -17,7 +32,7 @@ lib/
 ├── data/            # Models and services (API + cache)
 ├── features/
 │   └── user_list/   # Domain Riverpod notifier, UI screens, and widgets
-│   └── user_detail/ 
+│   └── user_detail/
 └── routes.dart      # App routes
 ```
 `flutter_riverpod` manages UI state, `dio` handles networking, `get_it` wires dependencies, and `hive_flutter` powers caching.
